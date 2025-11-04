@@ -61,5 +61,27 @@ A paleta de cores foi configurada no `tailwind.config.js` para refletir o design
 
 O projeto está conectado ao *deploy* do backend para consumir as rotas de Categoria:
 
-* **Endpoint Principal
-* 
+* **Endpoint Principal (Service):** `https://farmacianest.onrender.com`
+* **Swagger (Documentação da API):** `https://farmacianest.onrender.com/swagger`
+
+---
+
+## 🚀 Como Rodar o Projeto
+
+1.  **Clone o Repositório:**
+    ```bash
+    git clone [https://github.com/JoeChriszelSilva/projectpharma.git](https://github.com/JoeChriszelSilva/projectpharma.git)
+    cd projectpharma
+    ```
+
+2.  **Instale as Dependências:**
+    ```bash
+    npm install
+    ```
+
+3.  **Inicie o Servidor Local:**
+    ```bash
+    npm run dev
+    ```
+
+O projeto estará acessível em `http://localhost:5173/` (ou outra porta).
