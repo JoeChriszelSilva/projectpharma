@@ -1,5 +1,65 @@
-🚀 Farmacia Nest (Project Pharma)Um projeto front-end desenvolvido em React e TypeScript, seguindo o cronograma do Bloco 3, focado na criação de um sistema de cadastro e listagem de categorias para uma plataforma de e-commerce farmacêutico.O projeto foi totalmente estilizado com a paleta de cores inspirada na identidade visual moderna e confiável da Farmácia Pague Menos (Azul e Vermelho), visando um design acolhedor e profissional.🔗 Link do Repositóriohttps://github.com/JoeChriszelSilva/projectpharma🎯 Performance Goals (Bloco 3)Todos os requisitos do Bloco 3 para a criação do projeto foram integralmente cumpridos:RequisitoStatusObservaçõesCriar projeto com Vite✅ CompletoProjeto iniciado via npm create vite@latest.Instalar Tailwind CSS✅ CompletoUtilizado para toda a estilização e personalização de cores.Instalar React Router DOM✅ CompletoConfigurado para navegação entre as páginas (Home, Categorias, CRUD).Instalar Axios✅ CompletoUtilizado na Service para integração com o Backend.Criar componentes Navbar, Footer, Home✅ CompletoComponentes base criados e estilizados.Criar a Service (sem Security)✅ CompletoIntegração com o Backend feita sem a parte de segurança (Tokens).Criar as Models (Interfaces)✅ CompletoInterfaces (Categoria e Produto) criadas.Criar o CRUD de Categoria✅ CompletoComponentes ListaCategorias, FormCategoria, DeletarCategoria e CardCategoria implementados.Criar as Rotas do projeto✅ CompletoRotas configuradas no App.tsx.🎨 Design & Estilização (Novo Padrão)Em vez da paleta terrosa inicial, o projeto adota o design da Farmácia Pague Menos para transmitir confiança e energia, mantendo o framework Tailwind CSS.🌈 Paleta de Cores (Tailwind Personalizado)Nome da ClasseVibeHex CodeUso Principalparque-lenhaAzul Confiança#003D99Títulos, Navbar, e Textos Principaisparque-tamaraVermelho Energia#E5002DBotões de Ação e Destaques (Ex: Header do Card)parque-areiaBranco Gelo#F7F7F7Fundo Principal da Aplicaçãoparque-jangadeiroAzul Claro#1A73E8Botões Secundários, Hoverparque-purpuraVermelho Alerta#D21A3DBotão Deletar🛠️ Tecnologias UtilizadasTecnologiaFunçãoViteFerramenta de build rápida.React + TypeScriptFramework e Linguagem de tipagem.Tailwind CSSFramework de estilização.React Router DOMGerenciamento de rotas.AxiosCliente HTTP para integração com a API.React SpinnersIndicadores de carregamento (loading).⚙️ Configuração do BackendO projeto está conectado ao deploy do backend para consumir as rotas de Categoria:Endpoint Principal (Service): https://farmacianest.onrender.comSwagger (Documentação da API): https://farmacianest.onrender.com/swagger🚀 Como Rodar o ProjetoClone o Repositório:Bashgit clone https://github.com/JoeChriszelSilva/projectpharma.git
-cd projectpharma
-Instale as Dependências:Bashnpm install
-Inicie o Servidor Local:Bashnpm run dev
-O projeto estará acessível em http://localhost:5173/ (ou outra porta).
+# 🚀 Farmacia Nest (Project Pharma)
+
+Um projeto *front-end* desenvolvido em **React** e **TypeScript**, focado na criação de um sistema de cadastro e listagem de categorias para uma plataforma de e-commerce farmacêutico.
+
+O projeto foi totalmente estilizado com o *framework* **Tailwind CSS**, adotando uma paleta de cores moderna e confiável inspirada na identidade visual da **Farmácia Pague Menos** (Azul e Vermelho).
+
+### 🔗 Link do Repositório
+
+[https://github.com/JoeChriszelSilva/projectpharma](https://github.com/JoeChriszelSilva/projectpharma)
+
+---
+
+## 🎯 Performance Goals (Bloco 3)
+
+Todos os requisitos do Bloco 3 para a criação do projeto foram integralmente cumpridos:
+
+| Requisito | Status | Observações |
+| :--- | :--- | :--- |
+| Criar projeto com **Vite** | ✅ Completo | Projeto iniciado via `npm create vite@latest`. |
+| Instalar **Tailwind CSS** | ✅ Completo | Utilizado para toda a estilização e personalização de cores. |
+| Instalar **React Router DOM** | ✅ Completo | Configurado para navegação entre as páginas (Home, Categorias, CRUD). |
+| Instalar **Axios** | ✅ Completo | Utilizado na Service para integração com o Backend. |
+| Criar componentes **Navbar, Footer, Home** | ✅ Completo | Componentes base criados e estilizados. |
+| Criar a **Service** (sem Security) | ✅ Completo | Integração com o Backend feita sem a parte de segurança (Tokens). |
+| Criar as **Models** (Interfaces) | ✅ Completo | Interfaces (`Categoria` e `Produto`) criadas. |
+| Criar o **CRUD de Categoria** | ✅ Completo | Componentes `ListaCategorias`, `FormCategoria`, `DeletarCategoria` e `CardCategoria` implementados. |
+| Criar as **Rotas** do projeto | ✅ Completo | Rotas configuradas no `App.tsx`. |
+
+---
+
+## 🎨 Design & Estilização (Pague Menos)
+
+A paleta de cores foi configurada no `tailwind.config.js` para refletir o design moderno da Pague Menos.
+
+### 🌈 Paleta de Cores (Tailwind Personalizado)
+
+| Nome da Classe | Vibe | Hex Code Sugerido | Uso Principal |
+| :--- | :--- | :--- | :--- |
+| `parque-lenha` | Azul Confiança | `#003D99` | Títulos, Navbar, e Textos Principais |
+| `parque-tamara` | Vermelho Energia | `#E5002D` | Botões de Ação e Destaques (Ex: Header do Card) |
+| `parque-areia` | Branco Gelo | `#F7F7F7` | Fundo Principal da Aplicação |
+| `parque-jangadeiro` | Azul Claro | `#1A73E8` | Botões Secundários, Hover |
+| `parque-purpura` | Vermelho Alerta | `#D21A3D` | Botão Deletar |
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Função |
+| :--- | :--- |
+| **Vite** | Ferramenta de build rápida. |
+| **React + TypeScript** | Framework e Linguagem de tipagem. |
+| **Tailwind CSS** | Framework de estilização. |
+| **React Router DOM** | Gerenciamento de rotas. |
+| **Axios** | Cliente HTTP para integração com a API. |
+| **React Spinners** | Indicadores de carregamento (*loading*). |
+
+---
+
+## ⚙️ Configuração do Backend
+
+O projeto está conectado ao *deploy* do backend para consumir as rotas de Categoria:
+
+* **Endpoint Principal
+* 
