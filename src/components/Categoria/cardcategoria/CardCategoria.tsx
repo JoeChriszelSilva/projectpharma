@@ -1,34 +1,38 @@
 import { Link } from "react-router-dom";
 import type Categoria from "../../../models/categoria";
+
 interface CardCategoriaProps {
   categoria: Categoria;
 }
 
 function CardCategoria({ categoria }: CardCategoriaProps) {
-  const nomeCategoria = categoria.nome || categoria.NomeCategoria;
   return (
-    <div className=" border flex  flex-col rounded-2xl overflow-hidden justify-between">
-      <header className="py-2 px-6 bg-blue-950 text-white font-bold text-2xl">
-        {nomeCategoria}
+    <div className="border-2 border-parque-lenha/20 flex flex-col rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+      <header className="py-4 px-6 bg-parque-tamara text-blue-950 font-extrabold text-2xl">
+        {categoria.nome}
       </header>
-      <p className="p-8 text-3xl bg-slate-200 h-full">{categoria.descricao}</p>
-      <div className="flex">
+
+      <p className="p-6 text-lg bg-white text-parque-lenha/90 h-full">
+        {categoria.descricao}
+      </p>
+
+      <div className="flex border-t border-parque-lenha/10">
         <Link
-          to=""
-          className="w-full text-slate-100 bg-blue-950 hover:bg-blue-700
-          flex items-center justify-center py-3"
+          to={`/editarcategoria/${categoria.id}`}
+          className="w-full text-blue-950 bg-parque-lenha hover:bg-blue-400 transition-colors flex items-center justify-center py-3 font-semibold text-lg"
         >
           <button>Editar</button>
         </Link>
+
         <Link
-          to={"/deletarCategoria/:id"}
-          className="text-slate-100 bg-red-400 hover:bg-red-700 w-full
-      flex items-center justify-center"
+          to={`/deletarcategoria/${categoria.id}`}
+          className="w-full text-blue-950 bg-parque-purpura hover:bg-red-800 transition-colors flex items-center justify-center py-3 font-semibold text-lg"
         >
-          <button>Delete</button>
+          <button>Deletar</button>
         </Link>
       </div>
     </div>
   );
 }
+
 export default CardCategoria;
