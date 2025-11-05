@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+# 🚀 Farmacia Nest (Project Pharma)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um projeto *front-end* desenvolvido em **React** e **TypeScript**, focado na criação de um sistema de cadastro e listagem de categorias para uma plataforma de e-commerce farmacêutico.
 
-Currently, two official plugins are available:
+O projeto foi totalmente estilizado com o *framework* **Tailwind CSS**, adotando uma paleta de cores moderna e confiável inspirada na identidade visual da **Farmácia Pague Menos** (Azul e Vermelho).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 🔗 Link do Repositório
 
-## React Compiler
+[https://github.com/JoeChriszelSilva/projectpharma](https://github.com/JoeChriszelSilva/projectpharma)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+---
 
-## Expanding the ESLint configuration
+## 🎯 Performance Goals (Bloco 3)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Todos os requisitos do Bloco 3 para a criação do projeto foram integralmente cumpridos:
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+| Requisito | Status | Observações |
+| :--- | :--- | :--- |
+| Criar projeto com **Vite** | ✅ Completo | Projeto iniciado via `npm create vite@latest`. |
+| Instalar **Tailwind CSS** | ✅ Completo | Utilizado para toda a estilização e personalização de cores. |
+| Instalar **React Router DOM** | ✅ Completo | Configurado para navegação entre as páginas (Home, Categorias, CRUD). |
+| Instalar **Axios** | ✅ Completo | Utilizado na Service para integração com o Backend. |
+| Criar componentes **Navbar, Footer, Home** | ✅ Completo | Componentes base criados e estilizados. |
+| Criar a **Service** (sem Security) | ✅ Completo | Integração com o Backend feita sem a parte de segurança (Tokens). |
+| Criar as **Models** (Interfaces) | ✅ Completo | Interfaces (`Categoria` e `Produto`) criadas. |
+| Criar o **CRUD de Categoria** | ✅ Completo | Componentes `ListaCategorias`, `FormCategoria`, `DeletarCategoria` e `CardCategoria` implementados. |
+| Criar as **Rotas** do projeto | ✅ Completo | Rotas configuradas no `App.tsx`. |
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 🎨 Design & Estilização (Pague Menos)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+A paleta de cores foi configurada no `tailwind.config.js` para refletir o design moderno da Pague Menos.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### 🌈 Paleta de Cores (Tailwind Personalizado)
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+| Nome da Classe | Vibe | Hex Code Sugerido | Uso Principal |
+| :--- | :--- | :--- | :--- |
+| `parque-lenha` | Azul Confiança | `#003D99` | Títulos, Navbar, e Textos Principais |
+| `parque-tamara` | Vermelho Energia | `#E5002D` | Botões de Ação e Destaques (Ex: Header do Card) |
+| `parque-areia` | Branco Gelo | `#F7F7F7` | Fundo Principal da Aplicação |
+| `parque-jangadeiro` | Azul Claro | `#1A73E8` | Botões Secundários, Hover |
+| `parque-purpura` | Vermelho Alerta | `#D21A3D` | Botão Deletar |
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+| Tecnologia | Função |
+| :--- | :--- |
+| **Vite** | Ferramenta de build rápida. |
+| **React + TypeScript** | Framework e Linguagem de tipagem. |
+| **Tailwind CSS** | Framework de estilização. |
+| **React Router DOM** | Gerenciamento de rotas. |
+| **Axios** | Cliente HTTP para integração com a API. |
+| **React Spinners** | Indicadores de carregamento (*loading*). |
+
+---
+
+## ⚙️ Configuração do Backend
+
+O projeto está conectado ao *deploy* do backend para consumir as rotas de Categoria:
+
+* **Endpoint Principal (Service):** `https://farmacianest.onrender.com`
+* **Swagger (Documentação da API):** `https://farmacianest.onrender.com/swagger`
+
+---
+
+## 🚀 Como Rodar o Projeto
+
+1.  **Clone o Repositório:**
+    ```bash
+    git clone [https://github.com/JoeChriszelSilva/projectpharma.git](https://github.com/JoeChriszelSilva/projectpharma.git)
+    cd projectpharma
+    ```
+
+2.  **Instale as Dependências:**
+    ```bash
+    npm install
+    ```
+
+3.  **Inicie o Servidor Local:**
+    ```bash
+    npm run dev
+    ```
+
+O projeto estará acessível em `http://localhost:5173/` (ou outra porta).
